@@ -1,3 +1,57 @@
-<h1>
-    hello
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+    <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        body{text-align: center;}
+        </style>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Customer Classification</h1>
+    <p>Enter 0 for Graduation || Enter 1 for Postgraduation || Enter 2 for Undergraduation </p>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <label for="Education"><b>Education : </b></label><br>
+      <input type="text" name="Education" placeholder="Education" required="required" /><br><br>
+      <p>Enter 0 for Single || Enter 1 for Relationship</p>
+      <label for="Marital_Status"><b>Marital Status : </b></label><br>
+    	<input type="text" name="Marital_Status" placeholder="Marital Status" required="required" /><br><br>
+        <label for="Income"><b>Income : </b></label><br>
+        <input type="text" name="Income" placeholder="Income" required="required" /><br><br>
+        <label for="Age"><b>Age : </b></label><br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br><br>
+        <label for="Customer_Years"><b>Customer Years : </b></label><br>
+        <input type="text" name="Customer_Years" placeholder="Customer Years" required="required" /><br><br>
+        <label for="Total_Expenses"><b>Total Expenses : </b></label><br>
+        <input type="text" name="Total_Expenses" placeholder="Total Expenses" required="required" /><br><br>
+        <label for="Total_Accepted_Cmp"><b>Total Accepted campaigns : </b></label><br>
+        <input type="text" name="Total_Accepted_Cmp" placeholder="Total Accepted campaigns" required="required" /><br><br>
+        <label for="Total_Purchases"><b>Total Purchases : </b></label><br>
+        <input type="text" name="Total_Purchases" placeholder="Total Purchases" required="required" /><br><br>
+        <label for="Children"><b>Children : </b></label><br>
+        <input type="text" name="Children" placeholder="Children" required="required" /><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>

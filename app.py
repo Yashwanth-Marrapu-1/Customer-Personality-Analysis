@@ -33,7 +33,7 @@ def predict():
     final_input=scalar.transform(np.array(data).reshape(1,-1))
     print(final_input)
     output=AdaBoostmodel.predict(final_input)[0]
-    return render_template("home.html",prediction_text="Customer belongs to :  {}".format(output))
+    return render_template("home.html",prediction_text="Customer belongs to : Cluster --> {}".format(output))
 
 
 
