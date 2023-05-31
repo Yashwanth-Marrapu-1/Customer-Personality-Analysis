@@ -1,10 +1,14 @@
 # Customer-Personality-Analysis
 
-# Software And Tools Requirements
 
-1. [GithubAccount](https://github.com/)
-2. [VSCodeIDE](https://code.visualstudio.com/)
+To Deploy the app you can run
 
-Create a new environment
 
-conda create -p venv python==3.7 -y
+>> gcloud app deploy
+
+Follow the prompt instructions to set it up
+
+>> gcloud app browse
+
+or Paste your url to new tab
+
